@@ -1,7 +1,5 @@
-/* let age,km
+/*
 let price = tariffa * km;
-let scontoUnder18 = price * 0.2;
-let scontoOver65= price * 0.4;
 
 
 if (isNaN(chilometri) || isNaN(age)){
@@ -15,11 +13,20 @@ if (age >= 65){
 } */
 
 const tariffa = 0.21;
-const button = document.querySelector('.btn-success')
+const sendButton = document.querySelector('.btn-success')
+const resetButton = document.querySelector('.btn-warning')
+let discountUnder18 = 0.2;
+let discountOver65= 0.4;
 
-button.addEventListener('click', function(){
-   let km = document.getElementById('km').value;
-   if (value = isNaN){
+
+sendButton.addEventListener('click', function(){
+   let name = document.getElementById('name-surname').value;
+   let km = parseInt(document.getElementById('km').value);
+   let age = document.getElementById('age').value;
+   if (isNaN(km) || name === '' || age === ''){
+    alert('Devi compilare i campi in modo corretto !')
+   } else {
+    console.log(name, km, age)
     
    }
 });
