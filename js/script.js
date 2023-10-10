@@ -29,6 +29,11 @@ sendButton.addEventListener('click', function(){
     console.log(name, km, age);
      
     ticket.classList.remove('d-none');
-    /* let namePassenger = */
+    let passengerName = document.getElementById('passenger-name');
+    passengerName.innerHTML = name;
+    let carriage = document.getElementById('carriage');
+    carriage.innerHTML = Math.floor(Math.random() * 10) + 1;
+    let cpCode = document.getElementById('cp-code');
+    cpCode.innerHTML = Math.floor(Math.random() * 100000) + 1;
    }
 });
