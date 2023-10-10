@@ -1,9 +1,10 @@
 myDiv = document.getElementById('my-text');
 /* myDiv.innerHTML = prezzoFinale */
 
-let chilometri = parseInt(prompt('Quanti chilometri dovrai percorrere?'));
-let age = parseInt(prompt('Quanti anni hai?'));
+/* let chilometri = parseInt(prompt('Quanti chilometri dovrai percorrere?'));
+let age = parseInt(prompt('Quanti anni hai?')); */
 const tariffa = 0.21;
+let age,km
 let price = tariffa * chilometri;
 let scontoUnder18 = price * 0.2;
 let scontoOver65= price * 0.4;
