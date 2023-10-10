@@ -17,7 +17,7 @@ const sendButton = document.querySelector('.btn-success')
 const resetButton = document.querySelector('.btn-warning')
 let discountUnder18 = 0.2;
 let discountOver65= 0.4;
-
+let ticket = document.querySelector('.ticket')
 
 sendButton.addEventListener('click', function(){
    let name = document.getElementById('name-surname').value;
@@ -26,7 +26,9 @@ sendButton.addEventListener('click', function(){
    if (isNaN(km) || name === '' || age === ''){
     alert('Devi compilare i campi in modo corretto !')
    } else {
-    console.log(name, km, age)
-    
+    console.log(name, km, age);
+     
+    ticket.classList.remove('d-none');
+    /* let namePassenger = */
    }
 });
