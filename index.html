@@ -8,49 +8,56 @@
     <title>Biglietto Treno</title>
 </head>
 <body>
-    <main class="bg-primary vh-100">
-        <h1 class="text-center text-uppercase">Calcola il prezzo del tuo biglietto</h1>
-        <div class=" container bg-info">
-            <div class="mb-3">
-                <label for="name-surname" class="form-label">Nome Cognome</label>
-                <input type="text" class="form-control" id="name-surname" name="name-surname" value="">
-              </div>
-              <div class="mb-3">
-                <label for="km" class="form-label">Km da percorrere</label>
-                <input type="text" class="form-control" id="km" name="km" value="">
-              </div>
-            <select class="form-select" id="age" name="age" value="" aria-label="Default select example">
-                <option value="Maggiorenne">Maggiorenne</option>
-                <option value="Minorenne">Minorenne</option>
-                <option value="Over65">Over65</option>
-            </select>
-            <button class="btn btn-success">Genera</button>
-            <button class="btn btn-warning">Annulla</button>
+    <main class="bg-danger vh-100">
+        <h2 class="text-center text-uppercase pt-5">Calcola il prezzo del tuo biglietto</h2>
+        <div class="container">
+            <form id="ticket-form" class="d-flex align-items-center justify-content-around">
+                <div class="mb-3 mt-3" id="ticket-input">
+                    <label for="name-surname" class="form-label">Nome Cognome</label>
+                    <input type="text" class="form-control" id="name-surname" name="name-surname" value="">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="km" class="form-label">Km da percorrere</label>
+                    <input type="text" class="form-control" id="km" name="km" value="">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="age" class="form-label">Fasce d'et&agrave;</label>
+                    <select class="form-select" id="age" name="age" value="" aria-label="Default select example">
+                        <option value="Maggiorenne">Maggiorenne</option>
+                        <option value="Minorenne">Minorenne</option>
+                        <option value="Over65">Over65</option>
+                    </select>
+                </div>
+            </form>
+            <div class="pb-4 mt-5 text-center">
+                <button class="btn btn-success me-3">Genera</button>
+                <button class="btn btn-warning">Annulla</button>
+            </div>
         </div>
         <div class="ticket d-none">
-            <h2 class="text-center text-uppercase">Il tuo biglietto</h2>
-            <div class="ticket-container container bg-info border">
+            <h2 class="text-center text-uppercase pt-5">Il tuo biglietto</h2>
+            <div class="ticket-container container">
                 <h3 class="tezt-uppercase">Dettaglio passeggeri</h3>
                 <div class="row">
                     <div class="col-3 bg-secondary">
-                        <h4 class="text-uppercase">Nome passeggero</h4>
-                        <h5 id="passenger-name"></h5>
+                        <h4 class="text-uppercase mt-2">Nome passeggero</h4>
+                        <h5 id="passenger-name" class="mt-5 pb-2"></h5>
                     </div>
                     <div class="col-3">
-                        <h4>Offerta</h4>
-                        <div id="offer"></div>
+                        <h4 class="mt-2">Offerta</h4>
+                        <div id="offer" class="mt-5 pb-2"></div>
                     </div>
                     <div class="col-2">
-                        <h4>Carrozza</h4>
-                        <div id="carriage"></div>
+                        <h4 class="mt-2">Carrozza</h4>
+                        <div id="carriage" class="mt-5 pb-2"></div>
                     </div>
                     <div class="col-2">
-                        <h4>Codice CP</h4>
-                        <div id="cp-code"></div>
+                        <h4 class="mt-2">Codice CP</h4>
+                        <div id="cp-code" class="mt-5 pb-2"></div>
                     </div>
                     <div class="col-2">
-                        <h4>Costo biglietto</h4>
-                        <div id="ticket-price"></div>
+                        <h4 class="mt-2">Costo biglietto</h4>
+                        <div id="ticket-price" class="mt-5 pb-2"></div>
                     </div>
                 </div>
             </div>

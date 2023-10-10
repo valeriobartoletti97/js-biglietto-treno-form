@@ -19,6 +19,11 @@ let discountUnder18 = 0.2;
 let discountOver65= 0.4;
 let ticket = document.querySelector('.ticket')
 let offerType
+let finalPrice
+
+resetButton.addEventListener('click', function(){
+    (document.getElementById('ticket-input')).reset();
+})
 
 sendButton.addEventListener('click', function(){
    let name = document.getElementById('name-surname').value;
@@ -41,18 +46,21 @@ sendButton.addEventListener('click', function(){
     cpCode.innerHTML = Math.floor(Math.random() * 100000) + 1;
 
     if(age === 'Over65'){
-        let finalPrice = price -(price * discountOver65);
+        finalPrice = price -(price * discountOver65);
         offerType = 'Biglietto Over65';
         console.log(finalPrice, offerType);
     } else if(age === 'Minorenne'){
-        let finalPrice = price -(price * discountUnder18);
+        finalPrice = price -(price * discountUnder18);
         offerType = 'Biglietto Minorenne';
         console.log(finalPrice, offerType);
     } else{
-        let finalPrice = price;
-        offertype = 'Biglietto Standard';
+        finalPrice = price;
+        offerType = 'Biglietto Standard';
         console.log(finalPrice, offerType);
     }
-
+    let offer = document.getElementById('offer');
+    offer.innerHTML = offerType;
+    let finalTicketCost = document.getElementById('ticket-price');
+    finalTicketCost.innerHTML = finalPrice.toFixed(2) + '€';
    }
 });
